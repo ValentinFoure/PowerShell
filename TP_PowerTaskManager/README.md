@@ -9,33 +9,17 @@ Le projet se compose de 7 scripts principaux, chacun spécialisé dans un domain
   Services actifs, utilisateurs locaux connectés
   Export JSON et CSV (`audit.json`, `audit.csv`)
 
-- **Nettoyage automatique** :
-  Suppression des fichiers temporaires utilisateur
-  Nettoyage du dossier `Downloads` (fichiers > 30 jours)
-  Suppression des fichiers `.log` > 5 Mo
+- **Nettoyage automatique** : Suppression des fichiers temporaires utilisateur / Nettoyage du dossier `Downloads` (fichiers > 30 jours) / Suppression des fichiers `.log` > 5 Mo
 
-- **Surveillance des processus** :
-  Affichage de tous les processus en cours
-  Filtrage des processus consommant > 100 Mo de RAM
-  Export CSV (`processus.csv`)
+- **Surveillance des processus** : Affichage de tous les processus en cours / Filtrage des processus consommant > 100 Mo de RAM / Export CSV (`processus.csv`)
 
-- **Sauvegarde de documents** :
-  Copie des fichiers `.docx`, `.pdf`, `.txt` depuis un dossier source
-  Destination : `C:\Backup`
-  Vérification de la copie avec `Test-Path`
+- **Sauvegarde de documents** : Copie des fichiers `.docx`, `.pdf`, `.txt` depuis un dossier source / Destination : `C:\Backup` / Vérification de la copie avec `Test-Path`
 
-- **Gestion des utilisateurs** :
-  Liste des comptes utilisateurs locaux
-  Création d’un compte (avec mot de passe)
-  Désactivation ou suppression d’un compte existant
+- **Gestion des utilisateurs** : Liste des comptes utilisateurs locaux / Création d’un compte (avec mot de passe) / Désactivation ou suppression d’un compte existant
 
-- **Planification de tâches** :
-  Création d’une tâche planifiée pour lancer l’audit chaque jour à 10h
-  Affichage des tâches planifiées via PowerShell
+- **Planification de tâches** : Création d’une tâche planifiée pour lancer l’audit chaque jour à 10h / Affichage des tâches planifiées via PowerShell
 
-- **Menu interactif** :
-  Interface en ligne de commande
-  Permet de sélectionner l’un des scripts ci-dessus via un menu texte
+- **Menu interactif** : Interface en ligne de commande / Permet de sélectionner l’un des scripts ci-dessus via un menu texte
 
 ## Instructions d'exécution
 
