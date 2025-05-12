@@ -28,3 +28,5 @@ Le but est de fournir un rapport complet sur l'état du système pour des audits
 1. Ouvrez **PowerShell en tant qu’administrateur**.
 2. Téléchargez ou copiez le script `Audit.ps1` sur votre machine.
 3. Exécutez le script en utilisant la commande suivante : .\Audit.ps1
+
+![Capture d'écran 2025-05-12 134032](https://github.com/user-attachments/assets/f73e32c0-56d8-4b46-8e5c-8a869a7546ff)
