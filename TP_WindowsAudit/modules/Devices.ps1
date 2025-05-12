@@ -1,6 +1,11 @@
-# Liste des imprimantes
-Get-Printer | Select-Object Name, DriverName, PortName | Format-Table -AutoSize
+$devicesInfo = @{}
 
-# Liste des périphériques USB actuellement branchés
-Get-PnpDevice -PresentOnly | Where-Object { $_.InstanceId -like 'USB*' } |
-Select-Object FriendlyName, Manufacturer, Status | Format-Table -AutoSize
+# Liste des imprimantes installées
+$printers = Get-WmiObject Win32_Printer
+$devicesInfo["Imprimantes installées"] = $printers.Name
+
+# Liste des périphériques USB connectés
+$usbDevices = Get-WmiObject Win32_USBHub
+$devicesInfo["Périphériques USB"] = $usbDevices.DeviceID
+
+$devicesInfo

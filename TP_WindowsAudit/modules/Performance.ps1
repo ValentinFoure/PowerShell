@@ -1,21 +1,18 @@
-# --- Utilisation CPU ---
-$cpuLoad = Get-CimInstance -ClassName Win32_Processor | Measure-Object -Property LoadPercentage -Average
-Write-Output ("CPU utilisé : {0} %" -f $cpuLoad.Average)
+$performanceInfo = @{}
 
-# --- Utilisation RAM ---
-$compSys = Get-CimInstance Win32_OperatingSystem
-$totalRam = $compSys.TotalVisibleMemorySize
-$freeRam = $compSys.FreePhysicalMemory
-$usedRamPercent = [math]::Round((($totalRam - $freeRam) / $totalRam) * 100, 2)
-Write-Output ("RAM utilisée : {0} %" -f $usedRamPercent)
+# Utilisation actuelle du CPU
+$cpuUsage = Get-WmiObject Win32_Processor | Select-Object LoadPercentage
+$performanceInfo["CPU"] = "$($cpuUsage.LoadPercentage)% utilisé"
 
-# --- Disques (% d’espace libre) ---
-$drives = Get-CimInstance Win32_LogicalDisk -Filter "DriveType=3"
-foreach ($drive in $drives) {
-    $total = $drive.Size
-    $free = $drive.FreeSpace
-    if ($total -gt 0) {
-        $freePercent = [math]::Round(($free / $total) * 100, 2)
-        Write-Output "Disque $($drive.DeviceID) - Espace libre : $freePercent %"
-    }
-}
+# Utilisation actuelle de la RAM
+$ramUsage = Get-WmiObject Win32_OperatingSystem | Select-Object FreePhysicalMemory, TotalVisibleMemorySize
+$usedRam = [math]::round(($ramUsage.TotalVisibleMemorySize - $ramUsage.FreePhysicalMemory) / 1MB, 2)
+$totalRam = [math]::round($ramUsage.TotalVisibleMemorySize / 1MB, 2)
+$performanceInfo["RAM"] = "$usedRam MB utilisés sur $totalRam MB"
+
+# Espace libre sur les disques
+$disks = Get-WmiObject Win32_LogicalDisk -Filter "DriveType=3"
+$diskUsage = $disks | Select-Object DeviceID, @{Name="Espace Libre (%)"; Expression={[math]::round(($_.FreeSpace / $_.Size) * 100, 2)}}
+$performanceInfo["Disques"] = $diskUsage
+
+$performanceInfo

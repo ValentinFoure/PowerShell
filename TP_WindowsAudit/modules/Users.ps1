@@ -1,17 +1,11 @@
-Write-Output "=== Comptes locaux ==="
+$usersInfo = @{}
 
-# --- Liste des utilisateurs locaux ---
-Write-Output "`nUtilisateurs locaux :"
-try {
-    Get-LocalUser | Select-Object Name, Enabled, LastLogon | Format-Table -AutoSize
-} catch {
-    Write-Output " Erreur : Cette commande nécessite PowerShell 5.1+ et Windows 10+."
-}
+# Liste des utilisateurs locaux
+$users = Get-WmiObject Win32_UserAccount | Where-Object { $_.LocalAccount -eq $true }
+$usersInfo["Utilisateurs locaux"] = $users.Name
 
-# --- Liste des groupes locaux ---
-Write-Output "`nGroupes locaux :"
-try {
-    Get-LocalGroup | Select-Object Name, Description | Format-Table -AutoSize
-} catch {
-    Write-Output " Erreur : Cette commande nécessite PowerShell 5.1+ et Windows 10+."
-}
+# Liste des groupes locaux
+$groups = Get-WmiObject Win32_Group | Where-Object { $_.LocalAccount -eq $true }
+$usersInfo["Groupes locaux"] = $groups.Name
+
+$usersInfo

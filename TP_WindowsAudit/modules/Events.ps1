@@ -1,4 +1,4 @@
-# Récupère les 20 dernières erreurs du journal Système
-Get-EventLog -LogName System -EntryType Error -Newest 20 |
-Select-Object TimeGenerated, Source, EventID, Message |
-Format-Table -Wrap -AutoSize
+$events = Get-WinEvent -LogName System -MaxEvents 20 | Where-Object {$_.LevelDisplayName -eq 'Error'}
+$eventInfo = $events | Select-Object TimeCreated, Message
+
+$eventInfo
