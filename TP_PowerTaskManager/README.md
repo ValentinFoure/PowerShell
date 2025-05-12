@@ -4,10 +4,7 @@ Ce projet PowerShell permet de d'automatiser l’administration d’un poste de 
 
 Le projet se compose de 7 scripts principaux, chacun spécialisé dans un domaine clé :
 
-- **Audit système** :
-  Nom du PC, version de l'OS, RAM, disques, uptime
-  Services actifs, utilisateurs locaux connectés
-  Export JSON et CSV (`audit.json`, `audit.csv`)
+- **Audit système** : Nom du PC, version de l'OS, RAM, disques, uptime / Services actifs, utilisateurs locaux connectés / Export JSON et CSV (`audit.json`, `audit.csv`)
 
 - **Nettoyage automatique** : Suppression des fichiers temporaires utilisateur / Nettoyage du dossier `Downloads` (fichiers > 30 jours) / Suppression des fichiers `.log` > 5 Mo
 
@@ -28,3 +25,5 @@ Le projet se compose de 7 scripts principaux, chacun spécialisé dans un domain
 1. PowerShell version **5.1 ou supérieure**
 2. Droits administrateur recommandés** pour exécuter certains scripts
 3. Autorisation d'exécution des scripts PowerShell : Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+![Capture d'écran 2025-05-12 134505](https://github.com/user-attachments/assets/d2486518-33bc-4818-8d3a-929143b8570e)
