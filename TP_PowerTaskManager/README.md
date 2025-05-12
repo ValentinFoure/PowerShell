@@ -5,37 +5,37 @@ Ce projet PowerShell permet de d'automatiser l’administration d’un poste de 
 Le projet se compose de 7 scripts principaux, chacun spécialisé dans un domaine clé :
 
 - **Audit système** :
-- Nom du PC, version de l'OS, RAM, disques, uptime
-- Services actifs, utilisateurs locaux connectés
-- Export JSON et CSV (`audit.json`, `audit.csv`)
+  Nom du PC, version de l'OS, RAM, disques, uptime
+  Services actifs, utilisateurs locaux connectés
+  Export JSON et CSV (`audit.json`, `audit.csv`)
 
 - **Nettoyage automatique** :
-- Suppression des fichiers temporaires utilisateur
-- Nettoyage du dossier `Downloads` (fichiers > 30 jours)
-- Suppression des fichiers `.log` > 5 Mo
+  Suppression des fichiers temporaires utilisateur
+  Nettoyage du dossier `Downloads` (fichiers > 30 jours)
+  Suppression des fichiers `.log` > 5 Mo
 
 - **Surveillance des processus** :
-- Affichage de tous les processus en cours
-- Filtrage des processus consommant > 100 Mo de RAM
-- Export CSV (`processus.csv`)
+  Affichage de tous les processus en cours
+  Filtrage des processus consommant > 100 Mo de RAM
+  Export CSV (`processus.csv`)
 
 - **Sauvegarde de documents** :
-- Copie des fichiers `.docx`, `.pdf`, `.txt` depuis un dossier source
-- Destination : `C:\Backup`
-- Vérification de la copie avec `Test-Path`
+  Copie des fichiers `.docx`, `.pdf`, `.txt` depuis un dossier source
+  Destination : `C:\Backup`
+  Vérification de la copie avec `Test-Path`
 
 - **Gestion des utilisateurs** :
-- Liste des comptes utilisateurs locaux
-- Création d’un compte (avec mot de passe)
-- Désactivation ou suppression d’un compte existant
+  Liste des comptes utilisateurs locaux
+  Création d’un compte (avec mot de passe)
+  Désactivation ou suppression d’un compte existant
 
 - **Planification de tâches** :
-- Création d’une tâche planifiée pour lancer l’audit chaque jour à 10h
-- Affichage des tâches planifiées via PowerShell
+  Création d’une tâche planifiée pour lancer l’audit chaque jour à 10h
+  Affichage des tâches planifiées via PowerShell
 
 - **Menu interactif** :
-- Interface en ligne de commande
-- Permet de sélectionner l’un des scripts ci-dessus via un menu texte
+  Interface en ligne de commande
+  Permet de sélectionner l’un des scripts ci-dessus via un menu texte
 
 ## Instructions d'exécution
 
