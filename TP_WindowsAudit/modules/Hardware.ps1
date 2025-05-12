@@ -18,7 +18,12 @@ $hardwareInfo["RAM"] = "$ram Go"
 
 # Disques
 $disks = Get-WmiObject Win32_LogicalDisk -Filter "DriveType=3"
-$diskInfo = $disks | Select-Object DeviceID, @{Name="Taille (Go)"; Expression={[math]::round($_.Size / 1GB, 2)}}, @{Name="Libre (Go)"; Expression={[math]::round($_.FreeSpace / 1GB, 2)}}
-$hardwareInfo["Disques"] = $diskInfo
+$diskInfo = $disks | ForEach-Object {
+    $id = $_.DeviceID
+    $size = [math]::Round($_.Size / 1GB, 2)
+    $free = [math]::Round($_.FreeSpace / 1GB, 2)
+    "Disque $id : Taille = $size Go | Libre = $free Go"
+}
+$hardwareInfo["Disques"] = $diskInfo -join "`n"
 
 $hardwareInfo

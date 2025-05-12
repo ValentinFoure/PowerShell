@@ -2,7 +2,7 @@
 
 
 ===== Hardware =====
-Disques : @{DeviceID=C:; Taille (Go)=1862.14; Libre (Go)=1365.53}
+Disques : Disque C: : Taille = 1862.14 Go | Libre = 1365.53 Go
 Nom du PC : PC-VALENTIN
 RAM : 31.83 Go
 Modèle : System Product Name
@@ -108,8 +108,8 @@ Pare-feu : Microsoft.PowerShell.Commands.Internal.Format.FormatStartData Microso
 
 
 ===== Performance =====
-CPU : 16% utilisé
-RAM : 11.2 MB utilisés sur 31.83 MB
+CPU : 6% utilisé
+RAM : 11.19 MB utilisés sur 31.83 MB
 Disques : @{DeviceID=C:; Espace Libre (%)=73.33}
 
 
@@ -143,7 +143,7 @@ Périphériques USB : USB\VID_174C&PID_2074\5&153678D8&0&9 USB\VID_0B05&PID_18F3
 ===== OS =====
 Date de démarrage : 2025-05-10 15:37:08
 Version de Windows : Microsoft Windows 11 Professionnel
-Uptime : 1 jours 19 heures 51 minutes
+Uptime : 1 jours 19 heures 58 minutes
 Architecture : 32 bits
 
 
