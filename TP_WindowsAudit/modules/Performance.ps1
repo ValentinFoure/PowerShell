@@ -10,9 +10,14 @@ $usedRam = [math]::round(($ramUsage.TotalVisibleMemorySize - $ramUsage.FreePhysi
 $totalRam = [math]::round($ramUsage.TotalVisibleMemorySize / 1MB, 2)
 $performanceInfo["RAM"] = "$usedRam MB utilisés sur $totalRam MB"
 
+
 # Espace libre sur les disques
 $disks = Get-WmiObject Win32_LogicalDisk -Filter "DriveType=3"
-$diskUsage = $disks | Select-Object DeviceID, @{Name="Espace Libre (%)"; Expression={[math]::round(($_.FreeSpace / $_.Size) * 100, 2)}}
-$performanceInfo["Disques"] = $diskUsage
+$diskLines = $disks | ForEach-Object {
+    $drive = $_.DeviceID
+    $percentFree = [math]::Round(($_.FreeSpace / $_.Size) * 100, 2)
+    "Disque $drive : Espace Libre = $percentFree %"
+}
+$performanceInfo["Disques"] = $diskLines -join "`n"
 
 $performanceInfo

@@ -1,32 +1,71 @@
-## But du projet
+# WindowsAudit – Audit Complet d’un Système Windows
 
-Ce projet PowerShell permet de générer un rapport détaillé sur l'état d’un poste Windows.
+## Objectif du Projet
 
-Il couvre 9 grandes catégories d’informations :
+**WindowsAudit** est un projet PowerShell modulaire permettant de réaliser un **audit complet et automatisé** d’un poste de travail sous Windows.  
+Le script principal, appuyé par plusieurs modules spécialisés, collecte les informations critiques d’un système et génère un **rapport structuré** prêt à l’emploi.
 
-- **Informations matérielles** : Nom de l'ordinateur, processeur, RAM, disques durs.
-- **Logiciels installés** : Liste des logiciels présents avec nom, éditeur et version.
-- **Sécurité** : Statut du pare-feu et de Windows Defender.
-- **Utilisation système** : Pourcentage d'utilisation du CPU, RAM et espace disque.
-- **Événements récents** : Les 20 dernières erreurs dans le journal des événements système.
-- **Comptes locaux** : Liste des utilisateurs et des groupes locaux.
-- **Imprimantes et périphériques** : Liste des imprimantes installées et des périphériques USB connectés.
-- **Informations réseau** : Adresse IP, passerelle, DNS, adaptateurs réseau.
-- **Système d'exploitation** : Version de Windows, date de démarrage (uptime), architecture (32 ou 64 bits).
+Ce projet est particulièrement utile pour les administrateurs système, les formateurs ou les étudiants souhaitant découvrir l’automatisation de l’administration Windows via PowerShell.
 
-Le but est de fournir un rapport complet sur l'état du système pour des audits, des diagnostics ou des analyses de performance.
+---
 
-## Instructions d'exécution
+## Fonctionnalités Clés
+
+Le script couvre les domaines suivants :
+
+### 1. Informations Matérielles (`modules/Hardware.ps1`)
+- Nom de l’ordinateur
+- Fabricant, modèle
+- Type et quantité de RAM
+- Processeur
+- Disques (capacité totale et espace libre)
+
+### 2. Logiciels Installés (`modules/Software.ps1`)
+- Liste complète des logiciels installés avec :
+  - Nom
+  - Éditeur
+  - Version
+
+### 3. Sécurité (`modules/Security.ps1`)
+- Statut du pare-feu Windows
+- Statut de l’antivirus (Windows Defender)
+
+### 4. Utilisation Système (`modules/Performance.ps1`)
+- Utilisation actuelle du CPU (%)
+- Utilisation actuelle de la RAM (%)
+- Espace libre sur les disques (%)
+
+### 5. Événements Récents (`modules/Events.ps1`)
+- Dernières **20 erreurs** critiques du journal d’événements système
+
+### 6. Comptes Locaux (`modules/Users.ps1`)
+- Liste des utilisateurs locaux
+- Liste des groupes locaux
+
+### 7. Imprimantes et Périphériques (`modules/Devices.ps1`)
+- Liste des imprimantes installées
+- Périphériques USB connectés
+
+### 8. Informations Réseau (`modules/Network.ps1`)
+- Adresse IP, passerelle, DNS
+- Nom d’hôte
+- Adaptateurs réseau
+
+### 9. Système d’exploitation (`modules/OS.ps1`)
+- Version de Windows
+- Durée de fonctionnement (uptime)
+- Architecture (32 ou 64 bits)
+
+---
+
+## Instructions d’Utilisation
 
 ### Prérequis
 
-1. **PowerShell** doit être installé sur la machine (version 5.1 ou supérieure recommandée).
-2. Exécution en **mode administrateur** pour accéder à toutes les informations système (journal des événements, utilisateurs locaux, etc.).
+- Système : **Windows 10 ou 11**
+- PowerShell version **5.1 ou supérieure**
+- Exécuter PowerShell **en tant qu’administrateur**
 
-### Étapes pour exécuter le script
+### Exécution
 
-1. Ouvrez **PowerShell en tant qu’administrateur**.
-2. Téléchargez ou copiez le script `Audit.ps1` sur votre machine.
-3. Exécutez le script en utilisant la commande suivante : .\Audit.ps1
-
-![Capture d'écran 2025-05-12 134032](https://github.com/user-attachments/assets/f73e32c0-56d8-4b46-8e5c-8a869a7546ff)
+1. Cloner le projet ou télécharger l’archive : cd .\WindowsAudit\
