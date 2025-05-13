@@ -70,6 +70,7 @@ Le rapport système couvre **9 grandes catégories** :
    Version de Windows, uptime, architecture (32/64 bits).
 
 ---
+![Capture d'écran 2025-05-13 135833](https://github.com/user-attachments/assets/223ffec5-7871-422b-988b-b9990a58539e)
 
 ## Instructions d'exécution
 
@@ -85,3 +86,6 @@ Le rapport système couvre **9 grandes catégories** :
 
 1. Ouvrez PowerShell en mode administrateur.
 2. Positionnez-vous dans le dossier du projet : cd .\TPFinal-Maintenance\
+
+
+![Capture d'écran 2025-05-13 135833](https://github.com/user-attachments/assets/abcab62c-f668-43dc-b579-b6b2248b0fd1)
