@@ -1,25 +1,23 @@
-# Import des fonctions utilitaires
-. "$PSScriptRoot\utils.ps1"
-
-Write-Host "Lancement d'une tâche en arrière-plan..."
-
-$job = Start-Job -ScriptBlock {
-    Start-Sleep -Seconds 10
-    Get-Process | Sort-Object CPU -Descending | Select-Object -First 5
+# Lancer une tâche en arrière-plan
+$scriptBlock = {
+    Start-Sleep -Seconds 10  # Simule une tâche longue
+    Get-ChildItem -Recurse C:\Users | Out-File -FilePath C:\Temp\rapport_fichiers.txt
 }
 
-# Suivi de l'état
+$job = Start-Job -ScriptBlock $scriptBlock
+
+# Vérifier état de la tâche
 while ($job.State -eq 'Running') {
     Write-Host "Tâche en cours..."
-    Start-Sleep -Seconds 5
+    Start-Sleep -Seconds 2
 }
 
-# Gestion des erreurs
+# Récupération du résultat
 if ($job.State -eq 'Completed') {
+    Receive-Job -Job $job
     Write-Host "Tâche terminée avec succès."
-    Receive-Job $job
-} else {
-    Write-ErrorLog "La tâche a échoué ou été annulée."
+} elseif ($job.State -eq 'Failed') {
+    Write-Error "La tâche a échoué."
 }
 
 Remove-Job $job
