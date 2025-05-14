@@ -39,3 +39,5 @@ Le projet est structuré autour de trois modules principaux :
 
 1. Ouvrez PowerShell en mode administrateur.
 2. Positionnez-vous dans le dossier du projet : cd .\TPFinal-Maintenance\
+
+![Capture d'écran 2025-05-14 131953](https://github.com/user-attachments/assets/0854a8a7-a807-4bb3-9b6a-cbb5de6e3044)
