@@ -1,27 +1,25 @@
-# Importation des fonctions utilitaires
+# Import des fonctions utilitaires
 . "$PSScriptRoot\utils.ps1"
 
-function Start-LongRunningTask {
-    $scriptBlock = {
-        Start-Sleep -Seconds 10
-        Get-Process | Out-File -FilePath "$env:TEMP\process-report.txt"
-    }
-    
-    $job = Start-Job -ScriptBlock $scriptBlock
-    Write-Output "Tâche lancée avec l'ID : $($job.Id)"
-    return $job
+Write-Host "Lancement d'une tâche en arrière-plan..."
+
+$job = Start-Job -ScriptBlock {
+    Start-Sleep -Seconds 10
+    Get-Process | Sort-Object CPU -Descending | Select-Object -First 5
 }
 
-function Monitor-JobStatus {
-    param($job)
-
-    $job | Receive-Job -Wait -ErrorAction SilentlyContinue
-    if ($job.State -eq 'Completed') {
-        Write-Log -Message "Tâche terminée avec succès." -Level "INFO"
-    } elseif ($job.State -eq 'Failed') {
-        Write-Log -Message "Erreur lors de l'exécution de la tâche." -Level "ERROR"
-    }
+# Suivi de l'état
+while ($job.State -eq 'Running') {
+    Write-Host "Tâche en cours..."
+    Start-Sleep -Seconds 5
 }
 
-$job = Start-LongRunningTask
-Monitor-JobStatus -job $job
+# Gestion des erreurs
+if ($job.State -eq 'Completed') {
+    Write-Host "Tâche terminée avec succès."
+    Receive-Job $job
+} else {
+    Write-ErrorLog "La tâche a échoué ou été annulée."
+}
+
+Remove-Job $job
