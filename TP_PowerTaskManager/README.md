@@ -1,4 +1,4 @@
-# PowerTaskManager – Projet Powershell
+# PowerTaskManager – Gestion Automatisée d’un Poste Windows (Projet PowerShell)
 
 ## Objectif du Projet
 
@@ -45,18 +45,7 @@ Ce projet est particulièrement adapté à un usage pédagogique ou à une premi
 
 ---
 
-## Instructions d’Utilisation
-
-### Prérequis
-
-- **Windows 10/11**
-- **PowerShell 5.1 ou supérieur**
-- Lancer PowerShell **en tant qu’administrateur** pour exécuter certains scripts :
-  - Gestion des utilisateurs
-  - Création de tâches planifiées
-  - Suppression de fichiers protégés
-
-### Exécution des Scripts
+### Exécution
 
 1. Ouvrez PowerShell en mode administrateur.
-2. Positionnez-vous dans le dossier du projet : cd .\TPPowerTaskManager\
+2. Positionnez-vous dans le dossier du projet : cd .\TP_PowerTaskManager\

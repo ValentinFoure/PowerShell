@@ -1,4 +1,4 @@
-# WindowsAudit – Audit Complet d’un Système Windows
+# WindowsAudit – Audit Complet d’un Système Windows (Projet PowerShell)
 
 ## Objectif du Projet
 
@@ -58,14 +58,7 @@ Le script couvre les domaines suivants :
 
 ---
 
-## Instructions d’Utilisation
-
-### Prérequis
-
-- Système : **Windows 10 ou 11**
-- PowerShell version **5.1 ou supérieure**
-- Exécuter PowerShell **en tant qu’administrateur**
-
 ### Exécution
 
-1. Cloner le projet ou télécharger l’archive : cd .\WindowsAudit\
+1. Ouvrez PowerShell en mode administrateur.
+2. Cloner le projet ou télécharger l’archive : cd .\TP_WindowsAudit\
