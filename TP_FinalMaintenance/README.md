@@ -71,16 +71,6 @@ Le rapport système couvre **9 grandes catégories** :
 
 ---
 
-## Instructions d'exécution
-
-### Prérequis
-
-- **PowerShell 5.1** ou supérieur recommandé
-- Lancer PowerShell **en tant qu’administrateur** pour un accès complet :
-  - Lecture du journal des événements
-  - Gestion des services et du registre
-  - Informations complètes sur les utilisateurs
-
 ### Exécution
 
 1. Ouvrez PowerShell en mode administrateur.
