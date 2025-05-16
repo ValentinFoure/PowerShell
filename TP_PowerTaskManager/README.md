@@ -1,4 +1,4 @@
-# PowerTaskManager – Gestion Automatisée d’un Poste Windows (Projet PowerShell)
+# TP_PowerTaskManager (Projet PowerShell)
 
 ## Objectif du Projet
 

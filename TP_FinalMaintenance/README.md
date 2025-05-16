@@ -1,4 +1,4 @@
-# Centre de Maintenance Windows (Projet PowerShell)
+# FinalMaintenance (Projet PowerShell)
 
 ## Objectif du Projet
 
@@ -74,4 +74,4 @@ Le rapport système couvre **9 grandes catégories** :
 ### Exécution
 
 1. Ouvrez PowerShell en mode administrateur.
-2. Positionnez-vous dans le dossier du projet : cd .\TP_Final-Maintenance\
+2. Positionnez-vous dans le dossier du projet : cd .\TP_FinalMaintenance\
