@@ -37,3 +37,5 @@ Le projet s’organise autour de trois scripts principaux :
 
 1. Ouvrez PowerShell en mode administrateur.
 2. Positionnez-vous dans le dossier du projet : cd .\TPFinal-Maintenance\
+   
+![Capture d'écran 2025-05-16 122748](https://github.com/user-attachments/assets/d014454b-5bf1-4abf-984c-0a2682909faa)
