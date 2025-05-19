@@ -60,11 +60,11 @@ C:.
 
 6. Vous devez concevoir un script PowerShell modulaire et bien documenté permettant de réaliser un audit automatique d’un poste de travail Windows. Ce script doit collecter et présenter dans un rapport structuré les informations essentielles sur l’état du PC : matériel, logiciels, performances, sécurité, réseau, et journaux d’événements.
 
-7. 
+7. Vous devez automatiser des tâches d’intégration de données dans Snowflake à l’aide de PowerShell. Il permet d’exécuter des opérations SQL (CRUD), de manipuler des bases Snowflake à distance, et d’explorer deux approches : via les Cmdlets CData
 
 ## Conclusion
 
-Ces 6 TPs vous permettront d'apprendre les bases des PowerShell et comment mettre son code proprement en ligne sur github.
+Ces 7 TPs vous permettront d'apprendre les bases des PowerShell et comment mettre son code proprement en ligne sur github.
 
 ## Contributers
 
