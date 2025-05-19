@@ -44,6 +44,7 @@ C:.
 4. TP_PowerTaskManager
 5. TP_SecuriteDebogage
 6. TP_WindowsAudit
+7. TP_PowerShellCloud
 
 ## Fonctionnalités du Projet
 
@@ -58,6 +59,8 @@ C:.
 5. Ce projet a pour but de vous familiariser avec la gestion de la sécurité sur Windows via PowerShell, la création et le débogage de scripts, ainsi que la gestion des erreurs. 
 
 6. Vous devez concevoir un script PowerShell modulaire et bien documenté permettant de réaliser un audit automatique d’un poste de travail Windows. Ce script doit collecter et présenter dans un rapport structuré les informations essentielles sur l’état du PC : matériel, logiciels, performances, sécurité, réseau, et journaux d’événements.
+
+7. 
 
 ## Conclusion
 
