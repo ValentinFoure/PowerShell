@@ -8,16 +8,11 @@ Ce projet vise à découvrir Windows PowerShell au travers de différents travau
 
 ```bash
 
+C:.
 ├───TP_AdministrationAvancee
 │   ├───docs
 │   └───scripts
 ├───TP_FinalMaintenance
-│   ├───data
-│   ├───docs
-│   ├───data
-│   ├───data
-│   ├───data
-│   ├───data
 │   ├───data
 │   ├───docs
 │   ├───logs
@@ -25,6 +20,8 @@ Ce projet vise à découvrir Windows PowerShell au travers de différents travau
 ├───TP_GestionStrategies
 │   ├───docs
 │   └───scripts
+├───TP_PowerShellCloud
+│   └───Requetes
 ├───TP_PowerTaskManager
 │   ├───docs
 │   └───Scripts
