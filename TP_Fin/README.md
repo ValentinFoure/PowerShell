@@ -55,7 +55,7 @@ Le projet est composé de **7 exercices**, chacun illustrant des fonctionnalité
 
 ---
 
-## ▶Exécution des Scripts
+## Exécution des Scripts
 
 1. Ouvrez PowerShell en mode administrateur.
 2. Positionnez-vous dans le dossier du projet : cd .\TP_Fin\
