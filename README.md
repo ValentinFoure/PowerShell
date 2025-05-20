@@ -12,6 +12,14 @@ C:.
 ├───TP_AdministrationAvancee
 │   ├───docs
 │   └───scripts
+├───TP_Fin
+│   ├───Exercice_1
+│   ├───Exercice_2
+│   ├───Exercice_3
+│   ├───Exercice_4
+│   ├───Exercice_5
+│   ├───Exercice_6
+│   └───Exercice_7
 ├───TP_FinalMaintenance
 │   ├───data
 │   ├───docs
@@ -45,6 +53,7 @@ C:.
 5. TP_SecuriteDebogage
 6. TP_WindowsAudit
 7. TP_PowerShellCloud
+8. TP_Fin
 
 ## Fonctionnalités du Projet
 
@@ -62,9 +71,11 @@ C:.
 
 7. Vous devez automatiser des tâches d’intégration de données dans Snowflake à l’aide de PowerShell. Il permet d’exécuter des opérations SQL (CRUD), de manipuler des bases Snowflake à distance, et d’explorer deux approches : via les Cmdlets CData
 
+8. Ce Tp fait un rappel global sur le chapitre PowerShell
+
 ## Conclusion
 
-Ces 7 TPs vous permettront d'apprendre les bases des PowerShell et comment mettre son code proprement en ligne sur github.
+Ces 8 TPs vous permettront d'apprendre les bases des PowerShell et comment mettre son code proprement en ligne sur github.
 
 ## Contributers
 
